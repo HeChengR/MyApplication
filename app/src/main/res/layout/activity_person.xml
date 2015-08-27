@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_layout"></include>
+
+    <ImageView
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/myself_tt_01" />
+
+    <ImageView
+        android:id="@+id/iv_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="87dp"
+        android:src="@drawable/good_background" />
+
+    <ImageView
+        android:id="@+id/iv_milePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="245dp"
+        android:src="@drawable/post_background" />
+
+    <ImageView
+        android:id="@+id/iv_navigationEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="201dp"
+        android:layout_marginTop="87dp"
+        android:src="@drawable/event_background" />
+
+    <ImageView
+        android:id="@+id/iv_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="245dp"
+        android:src="@drawable/collection_background" />
+
+    <ImageView
+        android:id="@+id/iv_integralRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="401dp"
+        android:layout_marginTop="87dp"
+        android:src="@drawable/record_background" />
+
+    <ImageView
+        android:id="@+id/iv_wrongQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="401dp"
+        android:layout_marginTop="166dp"
+        android:src="@drawable/wrong_background" />
+
+    <ImageView
+        android:id="@+id/iv_rankList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="401dp"
+        android:layout_marginTop="245dp"
+        android:src="@drawable/rank_background" />
+</RelativeLayout>

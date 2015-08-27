@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/system_title_layout"></include>
+
+    <ImageView
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/system_setting_002_03" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="96dp"
+            android:text="非WIFI环境下使用"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.vxiaoxue.weiketang.ui.MySwitchButton
+            android:id="@+id/wifi_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="96dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="96dp"
+            android:text="非WIFI环境下加载"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.vxiaoxue.weiketang.ui.MySwitchButton
+            android:id="@+id/wifi_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="96dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="96dp"
+            android:text="缓存完通知"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.vxiaoxue.weiketang.ui.MySwitchButton
+            android:id="@+id/cache_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="96dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="96dp"
+            android:text="应用消息提送"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.vxiaoxue.weiketang.ui.MySwitchButton
+            android:id="@+id/message_push"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="96dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="96dp"
+            android:text="接受消息通知"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.vxiaoxue.weiketang.ui.MySwitchButton
+            android:id="@+id/message_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="96dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="96dp"
+            android:text="消除缓存"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.vxiaoxue.weiketang.ui.MySwitchButton
+            android:id="@+id/delete_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="189dp"
+            android:layout_marginTop="96dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

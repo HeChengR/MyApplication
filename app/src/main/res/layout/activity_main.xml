@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/index_bg"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="405dp"
+            android:layout_marginTop="1dp"
+            android:src="@mipmap/index_mine_05" />
+
+        <ImageView
+            android:id="@+id/medal_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="478dp"
+            android:layout_marginTop="46dp"
+            android:src="@mipmap/index_mine_06"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/medal_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="488dp"
+            android:layout_marginTop="46dp"
+            android:src="@mipmap/index_mine_06"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/medal_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="498dp"
+            android:layout_marginTop="46dp"
+            android:src="@mipmap/index_mine_06"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/see_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="515dp"
+            android:layout_marginTop="43dp"
+            android:text="@string/Check_medal"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="473dp"
+            android:layout_marginTop="11dp"
+            android:text="@string/UseName"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/personal_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="614dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/head_background" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="473dp"
+            android:layout_marginTop="28dp"
+            android:background="@mipmap/index_mine_03" />
+
+
+        <ImageView
+            android:id="@+id/iv_head_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="410dp"
+            android:layout_marginTop="7dp"
+            android:src="@mipmap/index_mine_01" />
+
+        <TextView
+            android:id="@+id/tv_progress_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="478dp"
+            android:layout_marginTop="29dp"
+            android:text="@string/progress"
+            android:textColor="#FDD929"
+            android:textSize="9dp" />
+
+        <ImageView
+
+            android:id="@+id/iv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="512dp"
+            android:layout_marginTop="31dp"
+            android:src="@mipmap/index_mine_04" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_personal_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="232dp"
+        android:src="@drawable/person_background" />
+
+    <ImageView
+        android:id="@+id/iv_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="201dp"
+        android:src="@drawable/chart_background" />
+
+    <ImageView
+        android:id="@+id/iv_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="444dp"
+        android:layout_marginTop="197dp"
+        android:src="@drawable/shop_background" />
+
+    <ImageView
+        android:id="@+id/iv_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="437dp"
+        android:layout_marginTop="78dp"
+        android:src="@drawable/task_background" />
+
+    <ImageView
+        android:id="@+id/iv_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="553dp"
+        android:layout_marginTop="237dp"
+        android:src="@drawable/attendance_background" />
+</RelativeLayout>

@@ -30,7 +30,7 @@ public class WrongQuestionActivity extends Activity {
     ListView wrongListView;
 
     private List<WrongInfo> WrongList = new ArrayList<>();
-    private WrongInfo info = new WrongInfo();
+    private WrongInfo info ;
     private WrongAdapter wrongAdapter;
     private String[] grade = {"一年级", "二年级", "三年级", "四年级", "五年级", "六年级"};
 
@@ -43,6 +43,7 @@ public class WrongQuestionActivity extends Activity {
         ButterKnife.inject(this);
 
         for (int index = 0;index < 6;index++){
+            info = new WrongInfo();
             info.setGrade(grade[index]);
             info.setUnit("共10个单元"+index);
             info.setNumbers("20题");
@@ -76,9 +77,10 @@ public class WrongQuestionActivity extends Activity {
         }
         @Override
         public void convert(ViewHolder helper, Object item) {
-            helper.setText(R.id.tv_grade, info.getGrade());
-            helper.setText(R.id.tv_unit,info.getUnit());
-            helper.setText(R.id.tv_numbers,info.getNumbers());
+            WrongInfo wrongInfo= (WrongInfo)item;
+            helper.setText(R.id.tv_grade,wrongInfo.getGrade());//年级
+            helper.setText(R.id.tv_unit,wrongInfo.getUnit());//单元
+            helper.setText(R.id.tv_numbers,wrongInfo.getNumbers());//题目
         }
     }
 

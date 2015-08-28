@@ -1,34 +1,38 @@
 package com.vxiaoxue.weiketang.domain;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by Administrator on 2015/8/27.
  */
 public class WrongThreeInfo {
-    private String Grade;//年级
-    private String Unit;//单元
-    private String Numbers;//题数
+    private String name;//年级
+    private String time;//单元
+    private Drawable icon;//题数
 
-    public String getGrade() {
-        return Grade;
+    public Drawable getIcon() {
+        return icon;
     }
 
-    public void setGrade(String grade) {
-        Grade = grade;
+    public void setIcon(Drawable icon) {
+        this.icon = icon;
     }
 
-    public String getUnit() {
-        return Unit;
+    public String getTime() {
+        return time;
     }
 
-    public void setUnit(String unit) {
-        Unit = unit;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public String getNumbers() {
-        return Numbers;
+
+
+    public String getName() {
+        return name;
     }
 
-    public void setNumbers(String numbers) {
-        Numbers = numbers;
+    public void setName(String name) {
+        this.name = name;
     }
 }

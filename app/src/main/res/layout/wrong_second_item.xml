@@ -8,7 +8,7 @@
         android:background="@mipmap/myself_news_bg2"
         />
     <TextView
-        android:id="@+id/tv_unit2"
+        android:id="@+id/tv_unitName_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
@@ -17,7 +17,7 @@
         android:textColor="#000000"
         />
     <TextView
-        android:id="@+id/tv_numbers2"
+        android:id="@+id/tv_numbers_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="500dp"

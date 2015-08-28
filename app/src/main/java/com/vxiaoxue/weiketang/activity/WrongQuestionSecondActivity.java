@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.vxiaoxue.weiketang.R;
 import com.vxiaoxue.weiketang.adapter.ListViewAdapter;
 import com.vxiaoxue.weiketang.adapter.ViewHolder;
+import com.vxiaoxue.weiketang.domain.WrongSecondInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +27,9 @@ import butterknife.InjectView;
 public class WrongQuestionSecondActivity extends Activity {
     @InjectView(R.id.wrong_listView_second)
     ListView wrongListViewSecond;
+    private List<WrongSecondInfo> WrongSecondList ;
 
-    private List  WrongSecondList = new ArrayList();
+    private WrongSecondInfo wrongSecondInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +38,26 @@ public class WrongQuestionSecondActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wrong_question_second);
         ButterKnife.inject(this);
-
-        WrongSecondAdapter wrongSecondAdapter = new WrongSecondAdapter(this,WrongSecondList,R.layout.wrong_second_item);
+        initData();
+        WrongSecondAdapter wrongSecondAdapter = new WrongSecondAdapter(this, WrongSecondList, R.layout.wrong_second_item);
         wrongListViewSecond.setAdapter(wrongSecondAdapter);
         wrongListViewSecond.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(WrongQuestionSecondActivity.this,WrongQuestionThreeActivity.class));
+                startActivity(new Intent(WrongQuestionSecondActivity.this, WrongQuestionThreeActivity.class));
             }
         });
-        initData();
-    }
-    public void initData(){
 
+    }
+
+    public void initData() {
+        WrongSecondList = new ArrayList();
+         for (int index = 0;index < 10; index ++){
+             wrongSecondInfo = new WrongSecondInfo();
+             wrongSecondInfo.setUnit("一单元：名称"+index);
+             wrongSecondInfo.setNumbers((int)(Math.random()*10+1) + "题");
+             WrongSecondList.add(wrongSecondInfo);
+         }
     }
 
     //返回
@@ -56,13 +65,15 @@ public class WrongQuestionSecondActivity extends Activity {
         finish();
     }
 
-    public class WrongSecondAdapter extends ListViewAdapter{
+    public class WrongSecondAdapter extends ListViewAdapter {
         public WrongSecondAdapter(Context context, List mDatas, int itemLayoutId) {
             super(context, mDatas, itemLayoutId);
         }
+
         @Override
         public void convert(ViewHolder helper, Object item) {
-
+            helper.setText(R.id.tv_unitName_second, ((WrongSecondInfo) item).getUnit());
+            helper.setText(R.id.tv_numbers_second, ((WrongSecondInfo) item).getNumbers());
         }
     }
 

@@ -25,6 +25,7 @@
         </LinearLayout>
         <ImageButton
             android:layout_width="wrap_content"
+            android:background="@drawable/click_enter_pass"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -48,6 +49,7 @@
         </LinearLayout>
         <ImageButton
             android:layout_width="wrap_content"
+            android:background="@drawable/click_enter_pass2"
             android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>

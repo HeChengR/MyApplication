@@ -131,6 +131,10 @@
             android:name=".activity.SignContentActivity"
             android:screenOrientation="landscape"
             android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name=".activity.PassThroughActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

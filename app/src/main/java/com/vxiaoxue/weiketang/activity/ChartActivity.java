@@ -27,4 +27,8 @@ public class ChartActivity extends Activity {
         Intent intent = new Intent(this,VideoListActivity.class);
         startActivity(intent);
     }
+
+    public void onPass(View v){
+        startActivity(new Intent(this,PassThroughActivity.class));
+    }
 }

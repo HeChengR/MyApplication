@@ -9,7 +9,6 @@ public class CollectionInfo {
     private Drawable IBackground;//背景图
     private String CourseName;//课程名
     private String CourseDes;//课程描述
-    private String CacheProgress;//缓存进度
 
     public Drawable getIBackground() {
         return IBackground;
@@ -22,17 +21,8 @@ public class CollectionInfo {
     public String getCourseName() {
         return CourseName;
     }
-
     public void setCourseName(String courseName) {
         CourseName = courseName;
-    }
-
-    public String getCacheProgress() {
-        return CacheProgress;
-    }
-
-    public void setCacheProgress(String cacheProgress) {
-        CacheProgress = cacheProgress;
     }
 
     public String getCourseDes() {

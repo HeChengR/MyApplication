@@ -1,31 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<include layout="@layout/system_title_layout"></include>
-    <ImageView
-        style="@style/Header"
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/person_data_tt_05" />
-    <ScrollView
-        android:layout_width="555dp"
-        android:layout_height="236dp"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="82dp"
-        style="@style/Scroll"
-        >
-        <TextView
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:lineSpacingExtra="10dp"
-            android:text="    首页主要显示网站各个子频道接口和一些展示信息。
-    通过首页个人中心入口进入该页面，点击进入对应的子频道，主要是用户行为记录，方便用户查询个人数据，右上方显示系统设置进入按钮。
-    通过年级区分各个海域，为每个海域单独命名，用户通过学习知识通过每一个关卡到达新的海域。第一次登陆用户可以选择年级和版本，之后默认相关选项，用户也可以通过按钮进行切换。    整个区域为一个整体的海图，支持左右滑动和上下滑动，左右滑动切换不同的年级，上下滑动观看整个海图区域。
-    海盗遭遇战：点击课程后，出现测试选项，测试练习配合海盗对战动画呈现，通过测试获得经验和游戏币奖励，根据测试结果正确率出现不同的动画状态。
-    正确率分类：100%、80%、60%、40%、20%、0"
-            />
-    </ScrollView>
-</RelativeLayout>
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/return_background"
+                    android:onClick="onReturn" />
+            </LinearLayout>
+
+            <ScrollView
+                style="@style/Scroll"
+                android:layout_width="555dp"
+                android:layout_height="236dp"
+                android:layout_marginTop="33dp">
+
+                <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:text="        首页主要显示网站各个子频道接口和一些展示信息。\n        通过首页个人中心入口进入该页面，点击进入对应的子频道，主要是用户行为记录，方便用户查询个人数据，右上方显示系统设置进入按钮。\n        通过年级区分各个海域，为每个海域单独命名，用户通过学习知识通过每一个关卡到达新的海域。第一次登陆用户可以选择年级和版本，之后默认相关选项，用户也可以通过按钮进行切换。\n        整个区域为一个整体的海图，支持左右滑动和上下滑动，左右滑动切换不同的年级，上下滑动观看整个海图区域。\n        海盗遭遇战：点击课程后，出现测试选项，测试练习配合海盗对战动画呈现，通过测试获得经验和游戏币奖励，根据测试结果正确率出现不同的动画状态。\n        正确率分类：100%、80%、60%、40%、20%、0"
+                    android:textColor="@color/appBlack"
+                    android:textSize="13dp"
+                    app:typeFace="ttf.TTF" />
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/person_data_tt_05" />
+</FrameLayout>

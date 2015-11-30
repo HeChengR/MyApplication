@@ -1,13 +1,9 @@
 package com.vxiaoxue.weiketang.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vxiaoxue.weiketang.R;
@@ -16,16 +12,14 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
+ * 个人资料显示页面
  * Created by Administrator on 2015/8/22.
  */
-public class SetDataActivity extends Activity implements View.OnClickListener {
-
+public class SetDataActivity extends BaseActivity implements View.OnClickListener {
     @InjectView(R.id.User_name)
     TextView UserName;
     @InjectView(R.id.Gender_data)
     TextView GenderData;
-    @InjectView(R.id.ll_user_name)
-    LinearLayout llUserName;
     @InjectView(R.id.Tel_data)
     TextView TelData;
     @InjectView(R.id.mail_data)
@@ -51,26 +45,53 @@ public class SetDataActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_data);
         ButterKnife.inject(this);
-
         EditData.setOnClickListener(this);
         SaveData.setOnClickListener(this);
     }
 
-    public void onReturn(View v) {
-        finish();
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+            case R.id.Edit_data:
+                startActivityForResult(new Intent(this, EditDataActivity.class), 1000);
+                break;
+            case R.id.Gender_data:
+                break;
+
+        }
     }
 
     @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.Edit_data) {
-            startActivity(new Intent(this, EditDataActivity.class));
-        } else if (v.getId() == R.id.Save_data) {
-
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null){
+            if (requestCode == 1000) {
+                Bundle bundle = data.getBundleExtra("bundle");
+                String username = bundle.getString("username");
+                String Gender = bundle.getString("Gender");
+                String Tel = bundle.getString("Tel");
+                String Mail = bundle.getString("Mail");
+                String Birthday = bundle.getString("Birthday");
+                String DistrictName = bundle.getString("DistrictName");
+                String Grade = bundle.getString("Grade");
+                String School = bundle.getString("School");
+                String Parent = bundle.getString("Parent");
+                String ParentTel = bundle.getString("ParentTel");
+                UserName.setText(username);
+                GenderData.setText(Gender);
+                TelData.setText(Tel);
+                mailData.setText(Mail);
+                BirthdayData.setText(Birthday);
+                AreaData.setText(DistrictName);
+                GradeData.setText(Grade);
+                SchoolData.setText(School);
+                ParentNameData.setText(Parent);
+                ParentTelData.setText(ParentTel);
+            }
         }
     }
 }

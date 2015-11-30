@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/myself_news_bg2"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_consumption_des"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:text="购买课程：课程啊啊啊消费10元"
+            android:textColor="@color/appBlack"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_consumption_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:text="2015-08-27"
+            android:textColor="@color/appBlack"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</RelativeLayout>

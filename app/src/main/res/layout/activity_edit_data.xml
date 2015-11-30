@@ -1,257 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/system_title_layout"></include>
-
-    <ImageView
-        style="@style/Header"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/person_data_tt_13" />
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
 
-    <LinearLayout
-        android:id="@+id/ll_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="86dp"
-        android:orientation="horizontal">
-
-        <ImageView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_03" />
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="请输入用户名"
-            android:singleLine="true"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_07" />
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="11dp"
-        android:background="@mipmap/person_edit_05"
-        android:hint="男"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp" />
-
-    <ImageView
-        android:id="@+id/edit_data_gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/person_edit_arrow_15"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="10dp"
-        />
-</RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="124dp"
-        android:orientation="horizontal">
-
-        <ImageView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_19" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="手机号"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:phoneNumber="true"
-            android:paddingLeft="5dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_20" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="邮箱"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="162dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_23" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="生日"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_24" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="请选择地区"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="200dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_27" />
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <EditText
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:background="@mipmap/person_edit_09"
-                android:hint="年级"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:paddingLeft="5dp" />
-            <ImageView
-                android:id="@+id/edit_data_grade"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/return_background"
+                        android:onClick="onReturn" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/person_edit_arrow_15"
-                android:layout_marginLeft="87dp"
-                android:layout_marginTop="10dp"
-                />
-        </RelativeLayout>
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_29" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="学校"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp" />
-    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_03" />
+
+                    <EditText
+                        android:id="@+id/mEditView_UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="请输入用户名"
+                        android:imeOptions="flagNoExtractUi|actionDone"
+                        android:maxLength="9"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_07" />
+
+                    <RelativeLayout
+                        android:id="@+id/RL_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_05">
+
+                        <TextView
+                            android:id="@+id/mTextView_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="6dp"
+                            android:text="男"
+                            android:textColor="@color/appBlack" />
+
+                        <ImageButton
+                            android:id="@+id/mImageButton_edit_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@mipmap/person_edit_arrow_15" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_19" />
+
+                    <EditText
+                        android:id="@+id/mEditView_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="手机号"
+                        android:imeOptions="flagNoExtractUi|actionDone"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_20" />
+
+                    <EditText
+                        android:id="@+id/mEditView_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="邮箱"
+                        android:imeOptions="flagNoExtractUi|actionDone"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_23" />
+
+                    <EditText
+                        android:id="@+id/mTextView_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:focusable="false"
+                        android:hint="生日"
+                        android:inputType="none"
+                        android:paddingLeft="8dp"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_24" />
+
+                    <TextView
+                        android:id="@+id/mTextView_DistrictName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="请选择地区"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="6dp"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_27" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="238dp"
-        android:orientation="horizontal">
+                    <RelativeLayout
+                        android:id="@+id/RL_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_09">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_37" />
+                        <TextView
+                            android:id="@+id/mTextView_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="6dp"
+                            android:text="一年级"
+                            android:textColor="@color/appBlack"
+                            android:textSize="13sp" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:background="@mipmap/person_edit_03"
-            android:hint="家长姓名"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp"
-            />
+                        <ImageButton
+                            android:id="@+id/mImageButton_edit_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="77dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@mipmap/person_edit_arrow_15" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:src="@mipmap/person_data_29" />
+
+                    <EditText
+                        android:id="@+id/mEditView_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="学校"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_37" />
+
+                    <EditText
+                        android:id="@+id/mEditView_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="家长姓名"
+                        android:imeOptions="flagNoExtractUi|actionDone"
+                        android:maxLength="9"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_38" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_38" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:phoneNumber="true"
-            android:background="@mipmap/person_edit_03"
-            android:hint="家长电话"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:paddingLeft="5dp" />
+                    <EditText
+                        android:id="@+id/mEditView_ParentTel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@mipmap/person_edit_03"
+                        android:hint="家长电话"
+                        android:imeOptions="flagNoExtractUi|actionDone"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/appBlack"
+                        android:textSize="13sp" />
 
-    </LinearLayout>
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/Reward_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="216dp"
-        android:layout_marginTop="284dp"
-        android:text="首次完成资料填写将获得xxx奖励"
-        android:textColor="#A55A01" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/Reward_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="首次完成资料填写将获得xxx奖励"
+                        android:textColor="@color/DataReward"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -270,8 +333,14 @@
             android:id="@+id/Save_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/Edit_data"
             android:layout_marginLeft="30dp"
             android:background="@drawable/save_data" />
     </LinearLayout>
-</RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/person_data_tt_13" />
+</FrameLayout>

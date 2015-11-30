@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- 这个是按下时的效果 -->
 
-    <item android:state_enabled="true" android:state_pressed="true"
+    <item  android:state_enabled="true" android:state_pressed="true"
 
         android:drawable="@mipmap/myself_news_bg1"/>
 

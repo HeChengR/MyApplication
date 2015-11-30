@@ -19,39 +19,22 @@
         <item name="android:windowAnimationStyle">@android:style/Theme.Translucent</item>
     </style>
 
-    <style name="Return">
-        <item name="android:src">@drawable/return_background</item>
-        <item name="android:layout_marginLeft">42dp</item>
-        <item name="android:layout_marginTop">32dp</item>
-    </style>
-
-    <style name="Set">
-        <item name="android:src">@drawable/setting_background</item>
-        <item name="android:layout_marginLeft">575dp</item>
-        <item name="android:layout_marginTop">32dp</item>
-    </style>
-
-    <style name="Header">
-        <item name="android:layout_marginLeft">200dp</item>
-        <item name="android:layout_marginTop">15dp</item>
-    </style>
-
     <style name="Scroll">
         <item name="android:scrollbars">none</item>
         <item name="android:fadingEdge">none</item>
         <item name="android:fadingEdgeLength">0dp</item>
         <item name="android:overScrollMode">never</item>
         <item name="android:divider">#00000000</item>
-        <item name="android:stretchMode">spacingWidthUniform</item>
     </style>
 
-    <style name="ListView">
-        <item name="android:layout_marginTop">86dp</item>
-        <item name="android:layout_marginLeft">42dp</item>
-        <item name="android:layout_marginRight">41dp</item>
-        <item name="android:layout_marginBottom">67dp</item>
-        <item name="android:divider">#00000000</item>
-        <item name="android:scrollbars">none</item>
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
-
 </resources>

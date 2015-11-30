@@ -1,19 +1,16 @@
 package com.vxiaoxue.weiketang.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.vxiaoxue.weiketang.R;
-import com.vxiaoxue.weiketang.adapter.ListViewAdapter;
-import com.vxiaoxue.weiketang.adapter.ViewHolder;
-import com.vxiaoxue.weiketang.domain.WrongSecondInfo;
+import com.vxiaoxue.weiketang.adapter.GmAdapter;
+import com.vxiaoxue.weiketang.adapter.MyViewHolder;
+import com.vxiaoxue.weiketang.domain.WrongSecondModal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,19 +19,18 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
+ * 错题本二级页面
  * Created by Administrator on 2015/8/27.
  */
-public class WrongQuestionSecondActivity extends Activity {
+public class WrongQuestionSecondActivity extends BaseActivity {
     @InjectView(R.id.wrong_listView_second)
     ListView wrongListViewSecond;
-    private List<WrongSecondInfo> WrongSecondList ;
+    private List<WrongSecondModal> WrongSecondList;
 
-    private WrongSecondInfo wrongSecondInfo;
+    private WrongSecondModal wrongSecondInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wrong_question_second);
         ButterKnife.inject(this);
@@ -47,35 +43,27 @@ public class WrongQuestionSecondActivity extends Activity {
                 startActivity(new Intent(WrongQuestionSecondActivity.this, WrongQuestionThreeActivity.class));
             }
         });
-
     }
 
     public void initData() {
         WrongSecondList = new ArrayList();
-         for (int index = 0;index < 10; index ++){
-             wrongSecondInfo = new WrongSecondInfo();
-             wrongSecondInfo.setUnit("一单元：名称"+index);
-             wrongSecondInfo.setNumbers((int)(Math.random()*10+1) + "题");
-             WrongSecondList.add(wrongSecondInfo);
-         }
+        for (int index = 0; index < 10; index++) {
+            wrongSecondInfo = new WrongSecondModal();
+            wrongSecondInfo.setUnit("一单元：名称" + index);
+            wrongSecondInfo.setNumbers((int) (Math.random() * 10 + 1) + "题");
+            WrongSecondList.add(wrongSecondInfo);
+        }
     }
 
-    //返回
-    public void onReturn(View v) {
-        finish();
-    }
-
-    public class WrongSecondAdapter extends ListViewAdapter {
+    public class WrongSecondAdapter extends GmAdapter {
         public WrongSecondAdapter(Context context, List mDatas, int itemLayoutId) {
             super(context, mDatas, itemLayoutId);
         }
 
         @Override
-        public void convert(ViewHolder helper, Object item) {
-            helper.setText(R.id.tv_unitName_second, ((WrongSecondInfo) item).getUnit());
-            helper.setText(R.id.tv_numbers_second, ((WrongSecondInfo) item).getNumbers());
+        public void convert(MyViewHolder helper, Object item,int position) {
+            helper.setText(R.id.tv_unitName_second, ((WrongSecondModal) item).getUnit());
+            helper.setText(R.id.tv_numbers_second, ((WrongSecondModal) item).getNumbers());
         }
     }
-
-
 }

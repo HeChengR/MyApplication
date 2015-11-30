@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bj_09_02">
+
+    <ScrollView
+        style="@style/Scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/grade_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="46dp"
+                android:paddingTop="8dp"
+                android:text="一年级"
+                android:textColor="@color/appBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/grade_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="46dp"
+                android:paddingTop="8dp"
+                android:text="二年级"
+                android:textColor="@color/appBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/grade_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="三年级"
+                android:textColor="@color/appBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/grade_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="46dp"
+                android:paddingTop="8dp"
+                android:text="四年级"
+                android:textColor="@color/appBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/grade_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="46dp"
+                android:paddingTop="8dp"
+                android:text="五年级"
+                android:textColor="@color/appBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/grade_06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="46dp"
+                android:paddingTop="8dp"
+                android:text="六年级"
+                android:textColor="@color/appBlack"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/mImageButton_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/person_edit_arrow_08" />
+</FrameLayout>

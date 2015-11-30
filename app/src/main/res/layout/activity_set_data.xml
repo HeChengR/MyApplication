@@ -1,227 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/system_title_layout"></include>
-
-    <ImageView
-        style="@style/Header"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/person_data_tt_13" />
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
 
-    <LinearLayout
-        android:id="@+id/ll_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="86dp"
-        android:orientation="horizontal">
-
-        <ImageView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_03" />
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/User_name"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="我小时候可帅了"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_07" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="onReturn"
+                    android:background="@drawable/return_background" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/Gender_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="男"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="124dp"
-        android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <ImageView
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_03" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_19" />
+                    <TextView
+                        android:id="@+id/User_name"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="我小时候可帅了"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
 
-        <TextView
-            android:id="@+id/Tel_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="15234251449"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_07" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_20" />
+                    <TextView
+                        android:id="@+id/Gender_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="男"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+                </LinearLayout>
 
-        <TextView
-            android:id="@+id/mail_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="qq.com"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="162dp"
-        android:orientation="horizontal">
+                    <ImageView
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_23" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_19" />
 
-        <TextView
-            android:id="@+id/Birthday_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="2015-05-09"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/Tel_data"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="15234251449"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_24" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_20" />
 
-        <TextView
-            android:id="@+id/Area_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="山西"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/mail_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="qq.com"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+                </LinearLayout>
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_23" />
+
+                    <TextView
+                        android:id="@+id/Birthday_data"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="2015-05-09"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_24" />
+
+                    <TextView
+                        android:id="@+id/Area_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="山西"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_27" />
+
+                    <TextView
+                        android:id="@+id/Grade_data"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="一年级"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_29" />
+
+                    <TextView
+                        android:id="@+id/School_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="山西大学"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/person_data_37" />
+
+                    <TextView
+                        android:id="@+id/ParentName_data"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="大帅哥"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="200dp"
-        android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:src="@mipmap/person_data_38" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_27" />
+                    <TextView
+                        android:id="@+id/ParentTel_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:text="13933355598"
+                        android:textColor="@color/appBlack"
+                        android:textSize="19dp" />
+                </LinearLayout>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/Grade_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="一年级"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:src="@mipmap/person_data_29" />
-
-        <TextView
-            android:id="@+id/School_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="山西大学"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="238dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_37" />
-
-        <TextView
-            android:id="@+id/ParentName_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="大帅哥"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="59dp"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/person_data_38" />
-
-        <TextView
-            android:id="@+id/ParentTel_data"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="6dp"
-            android:text="13933355598"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/Reward_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="216dp"
-        android:layout_marginTop="284dp"
-        android:text="首次完成资料填写将获得xxx奖励"
-        android:textColor="#A55A01" />
-
+                <TextView
+                    android:id="@+id/Reward_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首次完成资料填写将获得xxx奖励"
+                    android:textColor="@color/DataReward"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -240,8 +263,14 @@
             android:id="@+id/Save_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/Edit_data"
             android:layout_marginLeft="30dp"
             android:background="@drawable/save_data" />
     </LinearLayout>
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/person_data_tt_13" />
+</FrameLayout>

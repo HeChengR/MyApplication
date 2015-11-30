@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/myself_wpp_dk"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/myself_wpp_03"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/myself_wp_pic_01" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PropName"
+                    android:textColor="@color/appBlack"
+                    android:textSize="27dp"
+                    app:typeFace="ttf.TTF" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                        android:id="@+id/gid_PropNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/PropNumber"
+                        android:textSize="17dp"
+                        app:typeFace="ttf.TTF" />
+
+                    <TextView
+                        android:id="@+id/gid_PropNumber_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/PropNumber_number"
+                        android:textColor="@color/PropNumber_number_color"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/myself_wpp_04"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                android:id="@+id/gid_PropAttrs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PropAttrs"
+                android:textSize="15dp"
+                app:typeFace="ttf.TTF" />
+
+            <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                android:id="@+id/gid_PropAttrs2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PropAttrs"
+                android:textSize="15dp"
+                app:typeFace="ttf.TTF" />
+
+            <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                android:id="@+id/gid_PropAttrs3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PropAttrs"
+                android:textSize="15dp"
+                app:typeFace="ttf.TTF" />
+
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/Scroll"
+            android:layout_width="193dp"
+            android:layout_height="43dp">
+
+            <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                android:id="@+id/gid_PropDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PropDes"
+                android:textColor="@color/appBlack"
+                app:typeFace="ttf.TTF" />
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/gid_discard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/good_item_des_discard" />
+
+            <ImageButton
+                android:id="@+id/gid_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/good_item_des_use" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

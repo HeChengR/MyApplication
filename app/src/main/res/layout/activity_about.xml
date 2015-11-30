@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/system_title_layout"></include>
-    <ImageView
-        style="@style/Header"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/person_data_tt_11" />
-    <ScrollView
-        android:layout_width="555dp"
-        android:layout_height="236dp"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="82dp"
-        style="@style/Scroll"
-        >
-        <TextView
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:lineSpacingExtra="10dp"
-            android:text="    微课糖教育网站，是微课网公司旗下微课网小学部独立研发的全新幼小线上教育网站。网站内容目前主要包括语文、数学、英语三大科目的趣味视频课程、线上互动练习和完善的题库系统。微课糖以学生兴趣为主要目的，提出学习是甜的的公司主旨，以兴趣为导师，让孩子不再为学习而苦恼。
-    微课糖依托于北京微课创景教育科技有限公司，京城教育界一众名师发起创立，在中国现阶段教育改革的大背景下，倡导“高效学习，快乐分享”的学习理念，追求中国学生学习过程的优化。
-    由于幼小教育与初高中教育的差异性，微课糖在依托于微课网平台的基础上，决定独立运作。"
-            />
-    </ScrollView>
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
 
-</RelativeLayout>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="onReturn"
+                    android:background="@drawable/return_background" />
+            </LinearLayout>
+                <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                    android:layout_width="558dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_height="236dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="        微课糖教育网站，是微课网公司旗下微课网小学部独立研发的全新幼小线上教育网站。网站内容目前主要包括语文、数学、英语三大科目的趣味视频课程、线上互动练习和完善的题库系统。微课糖以学生兴趣为主要目的，提出学习是甜的的公司主旨，以兴趣为导师，让孩子不再为学习而苦恼。\n        微课糖依托于北京微课创景教育科技有限公司，京城教育界一众名师发起创立，在中国现阶段教育改革的大背景下，倡导“高效学习，快乐分享”的学习理念，追求中国学生学习过程的优化。由于幼小教育与初高中教育的差异性，微课糖在依托于微课网平台的基础上，决定独立运作。"
+                    android:textColor="@color/appBlack"
+                    app:typeFace="ttf.TTF"
+                    android:textSize="13dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/person_data_tt_11" />
+</FrameLayout>

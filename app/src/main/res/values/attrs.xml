@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTextView">
+        <attr name="typeface">
+            <enum name="normal" value="1"></enum>
+            <enum name="rank" value="2"></enum>
+            <enum name="shop" value="3"></enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MagicFont">
+        <attr name="typeFace" format="string"/>
+    </declare-styleable>
+</resources>

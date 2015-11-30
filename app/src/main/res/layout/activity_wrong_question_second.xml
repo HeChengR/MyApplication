@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/title_layout"></include>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/title_layout" />
+
+            <ListView
+                android:id="@+id/wrong_listView_second"
+                android:layout_width="555dp"
+                android:layout_height="231dp"
+                android:layout_marginTop="33dp"
+                android:divider="#00000000"
+                android:dividerHeight="4dp"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"></ListView>
+        </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
-        style="@style/Header"
+        android:id="@+id/mImageView_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
         android:src="@mipmap/myself_tt_05" />
-
-    <ListView
-        android:id="@+id/wrong_listView_second"
-        style="@style/ListView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:dividerHeight="7dp"></ListView>
-</RelativeLayout>
+</FrameLayout>

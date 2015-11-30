@@ -1,25 +1,20 @@
 package com.vxiaoxue.weiketang.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
 import com.vxiaoxue.weiketang.R;
+
+import butterknife.ButterKnife;
 
 /**
  * Created by Administrator on 2015/8/24.
  */
-public class FactionActivity extends Activity {
+public class FactionActivity extends BaseActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faction);
-    }
-    public void onReturn(View v){
-        finish();
+        ButterKnife.inject(this);
     }
 }

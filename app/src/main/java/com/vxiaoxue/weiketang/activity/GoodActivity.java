@@ -1,104 +1,70 @@
 package com.vxiaoxue.weiketang.activity;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.AdapterView;
+import android.widget.GridView;
 
 import com.vxiaoxue.weiketang.R;
-import com.vxiaoxue.weiketang.fragment.ConsumableFragment;
-import com.vxiaoxue.weiketang.fragment.CouponFragment;
-import com.vxiaoxue.weiketang.fragment.PropFragment;
+import com.vxiaoxue.weiketang.adapter.MyArtAdapter;
+import com.vxiaoxue.weiketang.adapter.MyArtPageAdapter;
+import com.vxiaoxue.weiketang.domain.ArtModal;
+
+import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
- * 我的物品
+ * 我的物品页面
  * Created by Administrator on 2015/8/19.
  */
-public class GoodActivity extends Activity implements View.OnClickListener {
-    @InjectView(R.id.good_shipProp)
-    ImageButton goodShipProp;
-    @InjectView(R.id.good_consumable)
-    ImageButton goodConsumable;
-    @InjectView(R.id.good_coupon)
-    ImageButton goodCoupon;
+public class GoodActivity extends BaseActivity{
+    @InjectView(R.id.good_ViewPager)
+    ViewPager goodViewPager;
 
-    private Fragment prop, Consumable, Coupon;
+    private static final float APP_PAGE_SIZE = 8.0f;
+    private ArrayList<ArtModal> mArray = new ArrayList();
+    private ArrayList<GridView> mGridViewList ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_good);
         ButterKnife.inject(this);
-        initView();
-        goodShipProp.setSelected(true);
-        //设置默认的fragment
-        prop = new PropFragment();
-        setFragment(R.id.good_content, prop);
+        initData();
+        initViews();
+        goodViewPager.setAdapter(new MyArtPageAdapter(this, mGridViewList));
     }
 
-    //返回
-    public void onReturn(View v) {
-        finish();
+
+    //初始化视图监听器
+    public void initViews() {
+        int Page = (int) Math.ceil(mArray.size() / APP_PAGE_SIZE);
+        mGridViewList = new ArrayList();
+        for (int index = 0; index < Page; index++) {
+            GridView mGridView = new GridView(this);
+            mGridView.setNumColumns(4);
+            mGridView.setAdapter(new MyArtAdapter(GoodActivity.this, mArray, index));
+            //点击弹出物品详情页面
+            mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    startActivity(new Intent(GoodActivity.this, GoodDetailActivity.class));
+                }
+            });
+            mGridViewList.add(mGridView);
+        }
     }
 
-    //进入设置页面
-    public void onSet(View v) {
-
-    }
-
-    /**
-     * 初始化视图
-     */
-    public void initView() {
-        goodCoupon.setOnClickListener(this);
-        goodShipProp.setOnClickListener(this);
-        goodConsumable.setOnClickListener(this);
-    }
-
-    /**
-     * fragment的管理类
-     */
-    public void setFragment(int fragment, Fragment newFragment) {
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(fragment, newFragment);
-        transaction.commit();
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.good_consumable://消耗品
-                goodConsumable.setSelected(true);
-                goodCoupon.setSelected(false);
-                goodShipProp.setSelected(false);
-                Consumable = new ConsumableFragment();
-                setFragment(R.id.good_content, Consumable);
-                break;
-            case R.id.good_coupon://优惠券
-                goodConsumable.setSelected(false);
-                goodCoupon.setSelected(true);
-                goodShipProp.setSelected(false);
-                Coupon = new CouponFragment();
-                setFragment(R.id.good_content, Coupon);
-                break;
-            case R.id.good_shipProp://船只道具
-                goodConsumable.setSelected(false);
-                goodCoupon.setSelected(false);
-                goodShipProp.setSelected(true);
-                prop = new PropFragment();
-                setFragment(R.id.good_content, prop);
-                break;
+    //模拟数据的初始化
+    private void initData() {
+        for (int index = 0; index < 20; index++) {
+            ArtModal info = new ArtModal();
+            info.setDrawable(getResources().getDrawable(R.mipmap.myself_wp_pic_01));
+            mArray.add(info);
         }
     }
 }

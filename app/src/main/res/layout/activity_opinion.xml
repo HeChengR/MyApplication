@@ -1,40 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/system_title_layout"></include>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/return_background"
+                    android:onClick="onReturn" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:orientation="vertical">
+
+                <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Opinion_text"
+                    android:textColor="@color/appBlack"
+                    android:textSize="13sp"
+                    app:typeFace="ttf.TTF" />
+
+                <EditText
+                    android:id="@+id/et_opinion"
+                    android:layout_width="555dp"
+                    android:layout_height="136dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@mipmap/feedback_03"
+                    android:gravity="top"
+                    android:hint="@string/Opinion_hint"
+                    android:imeOptions="flagNoExtractUi|actionDone"
+                    android:padding="10dp"
+                    android:textColor="@color/appBlack"
+                    android:textSize="13sp" />
+
+                <ImageButton
+                    android:id="@+id/opinion_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:background="@mipmap/feedback_07" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
-        style="@style/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
         android:src="@mipmap/person_data_tt_09" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="84dp"
-        android:text="感谢你对我们产品的支持"
-        android:textColor="@color/black"
-        android:textSize="16dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="110dp"
-        android:background="@mipmap/feedback_03"
-        android:gravity="top"
-        android:hint="请输入你宝贵的意见"
-        android:padding="10dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="240dp"
-        android:layout_marginTop="258dp"
-        android:background="@mipmap/feedback_07" />
-
-</RelativeLayout>
+</FrameLayout>

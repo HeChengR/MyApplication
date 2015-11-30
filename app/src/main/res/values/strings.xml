@@ -4,4 +4,23 @@
     <string name="Check_medal">查看勋章</string>
     <string name="UseName">花千骨大战白子画</string>
     <string name="progress">水手1</string>
+    <string name="shop_prop_name">金身</string>
+    <string name="shop_prop_des">强化船身防御力</string>
+    <string name="shop_money">800</string>
+    <string name="PropName">船头炮</string>
+    <string name="PropNumber">拥有数量</string>
+    <string name="PropNumber_number"> 2</string>
+    <string name="PropDes">使用后可以为你的船增加很多很多的攻击力很多很多的攻击力很多很多的攻击力很多很多的攻击力</string>
+    <string name="PropAttrs">攻击力 +</string>
+    <string name="PropAttrs_attrs">10</string>
+    <string name="Opinion_text">感谢您对我们产品提出宝贵的意见建议，您留下的每个字符都将指导我们不断的改进产品和服务</string>
+    <string name="Opinion_hint">请输入您宝贵的意见</string>
+    <string name="event_item_title">微课糖新大陆征程火热报名中</string>
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
 </resources>

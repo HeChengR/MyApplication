@@ -1,19 +1,17 @@
 package com.vxiaoxue.weiketang.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.vxiaoxue.weiketang.R;
-import com.vxiaoxue.weiketang.domain.WrongThreeInfo;
+import com.vxiaoxue.weiketang.domain.WrongThreeModal;
 
 import java.util.ArrayList;
 
@@ -23,39 +21,31 @@ import butterknife.InjectView;
 /**
  * Created by Administrator on 2015/8/27.
  */
-public class WrongQuestionThreeActivity extends Activity {
+public class WrongQuestionThreeActivity extends BaseActivity {
+
     @InjectView(R.id.wrong_listView_three)
     ExpandableListView wrongListViewThree;
-
-    private ArrayList<WrongThreeInfo> list = new ArrayList<>();
-    private WrongThreeInfo wrongThreeInfo;
+    private ArrayList<WrongThreeModal> list = new ArrayList<>();
+    private WrongThreeModal wrongThreeInfo;
     private MyExpandableAdapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wrong_question_three);
         ButterKnife.inject(this);
         initData();
-
         adapter = new MyExpandableAdapter();
         wrongListViewThree.setAdapter(adapter);
-        wrongListViewThree.setGroupIndicator(null);
+        wrongListViewThree.setGroupIndicator(null);//去掉箭头
     }
 
-    //返回
-    public void onReturn(View v) {
-        finish();
-    }
     public void initData() {
         for (int index = 0; index < 7; index++) {
-            wrongThreeInfo = new WrongThreeInfo();
+            wrongThreeInfo = new WrongThreeModal();
             wrongThreeInfo.setName("一元一次方程：点击进入详情页面" + index);
             wrongThreeInfo.setTime("2015-08-08");
-            wrongThreeInfo.setIcon(getResources().getDrawable(R.mipmap.remove_button_03));
             list.add(wrongThreeInfo);
         }
     }
@@ -101,32 +91,28 @@ public class WrongQuestionThreeActivity extends Activity {
             convertView = View.inflate(WrongQuestionThreeActivity.this, R.layout.wrong_three_item, null);
             TextView tv_name = (TextView) convertView.findViewById(R.id.tv_name);
             TextView tv_time3 = (TextView) convertView.findViewById(R.id.tv_time);
-            ImageView iv_remove = (ImageView) convertView.findViewById(R.id.iv_remove);
             tv_name.setText(list.get(groupPosition).getName());
             tv_time3.setText(list.get(groupPosition).getTime());
-            iv_remove.setImageDrawable(list.get(groupPosition).getIcon());
-            //点击删除
-            iv_remove.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    list.remove(groupPosition);
-                    adapter.notifyDataSetChanged();
-                    Toast.makeText(WrongQuestionThreeActivity.this, "已移除第" + (groupPosition + 1) + "个", Toast.LENGTH_SHORT).show();
-                }
-            });
             return convertView;
         }
 
         @Override
         public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-            TextView textView = new TextView(getApplication());
-            textView.setText("我是什么?");
-            return textView;
+            View view = LayoutInflater.from(WrongQuestionThreeActivity.this).inflate(R.layout.wrong_three_seconditem, null);
+           ScrollView wrong_parse = (ScrollView)view.findViewById(R.id.wrong_parse);
+            wrong_parse.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    return true;
+                }
+            });
+            return view;
         }
-
         @Override
         public boolean isChildSelectable(int groupPosition, int childPosition) {
             return false;
         }
     }
+
+
 }

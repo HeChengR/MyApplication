@@ -1,12 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/system_title_layout"></include>
-    <ImageView
-        style="@style/Header"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/return_background"
+                    android:onClick="onReturn" />
+            </LinearLayout>
+
+            <com.vxiaoxue.weiketang.ui.swipe.SwipeMenuListView
+                android:id="@+id/record_listViewDelete"
+                android:layout_width="557dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="33dp"
+                android:divider="@color/Transparent"
+                android:dividerHeight="7dp"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"></com.vxiaoxue.weiketang.ui.swipe.SwipeMenuListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
         android:src="@mipmap/person_data_tt_07" />
-</RelativeLayout>
+</FrameLayout>

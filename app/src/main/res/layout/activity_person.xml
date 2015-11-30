@@ -1,69 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/title_layout"></include>
-
-    <ImageView
-        style="@style/Header"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/title_layout" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/MyGood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/good_background" />
+
+                    <ImageButton
+                        android:id="@+id/NavigationEvent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:background="@drawable/event_background" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/IntegralRecord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:background="@drawable/record_background" />
+
+                        <ImageButton
+                            android:id="@+id/WrongQuestion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/wrong_background" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/MilePost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/post_background" />
+
+                    <ImageButton
+                        android:id="@+id/Collection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/collection_background" />
+
+                    <ImageButton
+                        android:id="@+id/RankList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/rank_background" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
         android:src="@mipmap/myself_tt_01" />
-
-    <ImageView
-        android:id="@+id/iv_good"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="87dp"
-        android:src="@drawable/good_background" />
-
-    <ImageView
-        android:id="@+id/iv_milePost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="245dp"
-        android:src="@drawable/post_background" />
-
-    <ImageView
-        android:id="@+id/iv_navigationEvents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="201dp"
-        android:layout_marginTop="87dp"
-        android:src="@drawable/event_background" />
-
-    <ImageView
-        android:id="@+id/iv_collection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="245dp"
-        android:src="@drawable/collection_background" />
-
-    <ImageView
-        android:id="@+id/iv_integralRecord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="401dp"
-        android:layout_marginTop="87dp"
-        android:src="@drawable/record_background" />
-
-    <ImageView
-        android:id="@+id/iv_wrongQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="401dp"
-        android:layout_marginTop="166dp"
-        android:src="@drawable/wrong_background" />
-
-    <ImageView
-        android:id="@+id/iv_rankList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="401dp"
-        android:layout_marginTop="245dp"
-        android:src="@drawable/rank_background" />
-</RelativeLayout>
+</FrameLayout>

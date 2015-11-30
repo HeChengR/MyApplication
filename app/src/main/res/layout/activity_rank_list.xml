@@ -1,13 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/title_layout"></include>
-    <ImageView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Header"
-        android:src="@mipmap/myself_tt_07"
-        />
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/title_layout"></include>
+
+            <LinearLayout
+                android:id="@+id/rank_Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="33dp"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rank_netWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:background="@drawable/rank_network" />
+
+                    <RadioButton
+                        android:id="@+id/rank_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:button="@null"
+                        android:background="@drawable/rank_area" />
+
+                    <RadioButton
+                        android:id="@+id/rank_school"
+                        android:button="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rank_school" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rank_Layout"
+                android:src="@mipmap/myself_record"></ImageView>
+
+            <LinearLayout
+                android:id="@+id/rank_LLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@mipmap/myself_phb_h_01"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:text="排名"
+                    android:textColor="@color/appBlack"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:text="姓名"
+                    android:textColor="@color/appBlack"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="112dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:text="题目"
+                    android:textColor="@color/appBlack"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:text="完成度"
+                    android:textColor="@color/appBlack"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <com.vxiaoxue.weiketang.ui.lv.XListView
+                android:id="@+id/rank_listView"
+                android:layout_width="557dp"
+                android:layout_height="107dp"
+                android:layout_alignRight="@+id/rank_LLayout"
+                android:divider="#00000000"
+                android:dividerHeight="6dp"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/rank_LLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/myself_phb_h_03"
+                android:orientation="horizontal">
+
+                <com.vxiaoxue.weiketang.ui.font.TextViewMagic
+                    android:id="@+id/rank_number_main"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="17dp"
+                    android:text="22"
+                    android:textColor="@color/yellow"
+                    android:textSize="17sp"
+                    app:typeFace="rank.ttf" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="44dp"
+                    android:src="@mipmap/myself_phb_pic_00" />
+
+                <TextView
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="哥就是海贼王"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="112dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="37dp"
+                    android:text="奥数"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="44dp"
+                    android:text="15%"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/myself_tt_07" />
+</FrameLayout>

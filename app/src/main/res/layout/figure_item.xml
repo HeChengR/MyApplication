@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/person_g_bj_04_10"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ImageView_figure_prop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/person_g_bj_01_55" />
+</RelativeLayout>

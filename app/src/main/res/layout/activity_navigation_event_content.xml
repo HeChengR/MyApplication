@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/title_layout" />
+
+            <LinearLayout
+                android:layout_width="557dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="33dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/myself_news_bg2"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/event_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_item_title"
+                        android:textColor="@color/appBlack"
+                        android:textSize="19sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="全国小盆友期盼已久的重磅学习神器-新大陆征程正式上线啦！
+    众所周知，我们生活在陆地上，大地是母亲，她养育着我们、保护着我们。但是，在这个海水面积约占百分之71的星球有另外一群人存在着，他们是海洋的孩子，波涛中的精灵，巨浪里的蛟龙，以海为父，将岛作母，怀抱日月，手握星辰；个个都有通天彻地的造船本领，人人兼具巧夺天工的雕琢技巧，这个地方来自传说，被人们称作海神之握（圣海之匙），却从没有人去过……
+但是，一次罕见的超级海潮来袭揭开了神秘的面纱，让这个地方出现在世人的眼前…惊险、有趣的海洋奇幻学习旅程即将开始，新奇太多，点此起航。
+"
+                    android:textColor="@color/appBlack"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/myself_tt_03" />
+</FrameLayout>

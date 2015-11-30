@@ -1,5 +1,6 @@
 package com.vxiaoxue.weiketang.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,9 @@ import butterknife.InjectView;
  * 系统设置页面
  * Created by Administrator on 2015/8/22.
  */
-public class SetActivity extends BaseActivity implements View.OnClickListener {
+public class SetActivity extends Activity implements View.OnClickListener {
+
+
     @InjectView(R.id.set_return)
     ImageView setReturn;
     @InjectView(R.id.set_data)
@@ -47,12 +50,6 @@ public class SetActivity extends BaseActivity implements View.OnClickListener {
         initView();
     }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
     public void initView() {
         setReturn.setOnClickListener(this);
         setData.setOnClickListener(this);
@@ -69,31 +66,35 @@ public class SetActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.set_return://返回
-                startActivity(new Intent(this,PreActivity.class));
-                overridePendingTransition(R.anim.pre_in,R.anim.pre_out);
                 finish();
                 break;
             case R.id.set_data://个人资料
-                startActivity(new Intent(this,SetDataActivity.class));
+                startActivity(new Intent(this, SetDataActivity.class));
                 break;
             case R.id.set_about://关于我们
-                startActivity(new Intent(this,AboutActivity.class));
+                startActivity(new Intent(this, AboutActivity.class));
                 break;
             case R.id.set_cancellation://注销
+                //清除当前task中的所有activity进入重新登录页面
+                Intent intent = new Intent(this,PreActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK  | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade, R.anim.hold);
                 break;
             case R.id.set_faction://功能介绍
-                startActivity(new Intent(this,FactionActivity.class));
+                startActivity(new Intent(this, FactionActivity.class));
                 break;
             case R.id.set_opinion://意见建议页面
-                startActivity(new Intent(this,OpinionActivity.class));
+                startActivity(new Intent(this, OpinionActivity.class));
                 break;
             case R.id.set_record://消费记录页面
-                startActivity(new Intent(this,RecordActivity.class));
+                startActivity(new Intent(this, RecordActivity.class));
                 break;
             case R.id.set_system://系统设置页面
-                startActivity(new Intent(this,SystemActivity.class));
+                startActivity(new Intent(this, SystemActivity.class));
                 break;
             case R.id.set_update://系统更新页面
+
                 break;
         }
     }

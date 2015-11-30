@@ -1,50 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@android:color/transparent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/title_layout"></include>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/myself_index_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/return_background"
+                    android:onClick="onReturn" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="507dp"
+                    android:background="@drawable/setting_background"
+                    android:onClick="onSet" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="151dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@mipmap/myself_wp_dk">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/good_ViewPager"
+                        android:layout_width="421dp"
+                        android:layout_height="235dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="49dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/good_shipProp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ship_prop"
+                            android:checked="true"
+                            android:button="@null" />
+
+                        <RadioButton
+                            android:id="@+id/good_consumable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/consumables"
+                            android:button="@null" />
+
+                        <RadioButton
+                            android:id="@+id/good_coupon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/coupons"
+                            android:button="@null" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Header"
-        android:src="@mipmap/myself_tt_02"
-        />
-
-    <FrameLayout
-        android:id="@+id/good_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginRight="45dp"
-        android:layout_marginTop="90dp" />
-
-    <ImageButton
-        android:id="@+id/good_shipProp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="101dp"
-        android:background="@null"
-        android:src="@drawable/ship_prop" />
-
-    <ImageButton
-        android:id="@+id/good_consumable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="155dp"
-        android:background="@null"
-        android:src="@drawable/consumables" />
-
-    <ImageButton
-        android:id="@+id/good_coupon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="210dp"
-        android:background="@null"
-        android:src="@drawable/coupons" />
+        android:layout_marginLeft="201dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/myself_tt_02" />
 </FrameLayout>

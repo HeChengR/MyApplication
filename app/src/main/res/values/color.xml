@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="BanTransparent">#50000000</color>
+    <color name="BanTransparent">#80000000</color>
     <color name="Transparent">#00000000</color>
     <color name="red">#ff0000</color>
     <color name="black">#000000</color>
+    <color name="collection_content">#857666</color>
+    <color name="appBlack">#3a230a</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#FFF15A</color>
+    <color name="gray">#E1BB7D</color>
+    <color name="PropNumber_number_color">#f00000</color>
+    <color name="DataReward">#a75a00</color>
+    <color name="integral_record_time">#857666</color>
+    <color name="gender_color">#ECCA93</color>
+    <color name="progress">#ffec4a</color>
+    <color name="rank_start">#fff46d</color>
+    <color name="rank_end">#ffd70c</color>
 </resources>
